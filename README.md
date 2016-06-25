@@ -1,10 +1,10 @@
 [![Build
 Status](https://travis-ci.org/wtanaka/ansible-role-keepassx.svg?branch=master)](https://travis-ci.org/wtanaka/ansible-role-keepassx)
 
-Role Name
-=========
+wtanaka.keepassx
+================
 
-Install KeePassX
+Ansible role to install KeePassX
 
 Example Playbook
 ----------------
