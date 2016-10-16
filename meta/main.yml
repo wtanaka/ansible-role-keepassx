@@ -4,13 +4,20 @@ galaxy_info:
   description: KeePassX
   company: http://wtanaka.com/
   license: GPLv2
-  min_ansible_version: 1.5.4
+  min_ansible_version: 1.4.4
   platforms:
   - name: Ubuntu
     versions:
+    - precise
+    - quantal
+    - raring
+    - saucy
     - trusty
+    - utopic
+    - vivid
     - wily
-  categories:
+    - xenial
+  galaxy_tags:
     - desktop
 dependencies: []
   # List your role dependencies here, one per line. Only

@@ -1,8 +1,14 @@
 ---
-- name: apt-get update
-  apt: update_cache=true cache_valid_time=3600
-  sudo: yes
+- include: compat.yml
 
-- name: install keepassx
-  apt: name=keepassx
-  sudo: yes
+- include: Debian.yml
+  when: ansible_os_family == 'Debian'
+
+- include_vars: "{{item}}"
+  with_first_found:
+  - "../vars/{{ansible_distribution}}-{{ansible_distribution_major_version | int}}.yml"
+  - "../vars/{{ansible_distribution}}.yml"
+  - "../vars/{{ansible_os_family}}.yml"
+  - "../vars/default.yml"
+
+- include: install_package_name.yml
